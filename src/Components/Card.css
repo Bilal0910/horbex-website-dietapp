@@ -1,9 +1,9 @@
-.cards-list {
+/* .cards-list {
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
     overflow-x: auto;
-}
+} */
 
 .card {
     width: 175px;

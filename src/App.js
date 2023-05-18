@@ -2,6 +2,8 @@ import Card from './Components/Card';
 import Hero from './Components/Hero';
 import NavBar from './Components/Nav';
 import data from './data';
+import './style.css'
+
 
 
 
