@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(250, 215, 234);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-bottom: 6px;
+    background-color: rgb(236, 151, 184);
+    border: 2px solid rgb(255, 0, 106);
+    border-radius: 50px;
+    box-shadow: 0px 7px 30px rgb(10, 0, 9);
+    animation-name: anm;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anm {
+    from {background-color: rgb(236, 151, 184);}
+    to {background-color: rgb(10, 1, 4);}
+    
+}
+
+.text-logo {
+    width: 190px;
+    height: 60px;
+    margin-left: 15px;
+    margin-top: 6px;
+    transition: 1s;
+}
+
+.text-logo:hover{
+    transform: scale(1.08);
+}
+
+.logo {
+    width: 60px;
+    margin-right: 10px;
+    margin-top: 3px;
+    transition: 1s;
+}
+
+.logo:hover{
+    transform: scale(1.4);
+}
