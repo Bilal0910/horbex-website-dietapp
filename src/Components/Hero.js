@@ -18,7 +18,7 @@ function Hero() {
     </div>
     <div className='col4'>
         <img className='image' src="https://brownbirdcampervancompetitions.co.uk/wp-content/uploads/2023/04/00010-Bespoke-VW-Campervan-Conversion-Brown-Bird-and-Company.jpeg" width="150px" alt="pic" />
-        <img className='image' src="https://www.sarahrichardsondesign.com/sites/default/files/styles/hero_slider_1440px_x_700px/public/2018-09/2017-0525-sr-5451-lighting.jpg?itok=8KrZJED_" width="150px" alt="pic" />
+        <img className='image' src="https://www.alhabibpaneldoors.com/download.php?file=images/interior-item/red-brown-bedroom-layout-ipc156.jpeg" width="150px" alt="pic" />
     </div>
     <div className='col5'>
         <img className='image' src="https://abeautifulmess.com/wp-content/uploads/2022/03/3CCDE9D2-B8DB-42CE-A66B-FD6215103E35-scaled.jpg" width="150px" alt="pic" />
