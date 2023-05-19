@@ -6,7 +6,8 @@ const data = [
         reviewCount: "8.0",
         country: "UAE",
         title: "Get yourself fit and healthy with working out in gym",
-        price: "150 AED /person"
+        price: "150 AED /person",
+        openSpots: 0
     },
 
     {
@@ -16,7 +17,8 @@ const data = [
         reviewCount: "7.5",
         country: "CHINA",
         title: "Enjoy the delicious foods as much as you can",
-        price: "1200 YEN /person"
+        price: "1200 YEN /person",
+        openSpots: 10
     }, 
 
     {
@@ -26,7 +28,8 @@ const data = [
         reviewCount: "9.5",
         country: "USA",
         title: "Get the best swimming experience with instructors",
-        price: "115 USD /person"
+        price: "115 USD /person",
+        openSpots: 10
     }, 
 
     {
@@ -36,7 +39,9 @@ const data = [
         reviewCount: "6.5",
         country: "UK London",
         title: "Enjoy the buffet where enjoy the desserts as well",
-        price: "70 POUND /person"
+        price: "70 POUND /person",
+        openSpots: 0
+
     },
 
     {
@@ -46,7 +51,9 @@ const data = [
         reviewCount: "8.0",
         country: "CANADA",
         title: "Bowl And Ace the Pins with your friends & family",
-        price: "120 CAD /person"
+        price: "120 CAD /person",
+        openSpots: 0
+
     },
 
     {
@@ -56,7 +63,9 @@ const data = [
         reviewCount: "6.5",
         country: "Norway",
         title: "Ice skating with the loved ones, what else more ?",
-        price: "200 NAD /person"
+        price: "200 NAD /person",
+        openSpots: 10
+
     },
 
     {
@@ -66,7 +75,9 @@ const data = [
         reviewCount: "4.5",
         country: "SPAIN",
         title: "Wanna play indoor, come lets play air-hockey",
-        price: "100 EURO /person"
+        price: "100 EURO /person",
+        openSpots: 10
+
     },
 
     {
@@ -76,7 +87,8 @@ const data = [
         reviewCount: "8.5",
         country: "Turkey",
         title: "HIking with your beloved is one of the best adventures",
-        price: "140 LIRA /person"
+        price: "140 LIRA /person",
+        openSpots: 9
     },
 
     {
@@ -86,7 +98,8 @@ const data = [
         reviewCount: "6.5",
         country: "MALAYSIA",
         title: "Live cracking concerts with the best bands as hellfire",
-        price: "170 RINGIT /person"
+        price: "170 RINGIT /person",
+        openSpots: 0
     },
 
     {
@@ -96,7 +109,8 @@ const data = [
         reviewCount: "9.5",
         country: "AMSTERDOM",
         title: "Night Life on the beautiful hills with beautiful sky",
-        price: "98.5 EURO /person"
+        price: "98.5 EURO /person",
+        openSpots: 10
     },
 
     {
@@ -106,7 +120,8 @@ const data = [
         reviewCount: "7.5",
         country: "INDIA",
         title: "Play as long as much piano with the instructors",
-        price: "975 INR /person"
+        price: "975 INR /person",
+        openSpots: 10
     },
 
     {
@@ -116,7 +131,8 @@ const data = [
         reviewCount: "7.5",
         country: "PAKISTAN",
         title: "Volley Ball at HawksBey in the sunny and cool weather ",
-        price: "2500 PKR /person"
+        price: "2500 PKR /person",
+        openSpots: 20
     },
 
     {
@@ -126,7 +142,8 @@ const data = [
         reviewCount: "6.5",
         country: "KUWAIT",
         title: "Go Cart and Mini Cart Racing together",
-        price: "25.5 DINAR /person"
+        price: "25.5 DINAR /person",
+        openSpots: 0
     },
 
     {
@@ -136,7 +153,8 @@ const data = [
         reviewCount: "7.5",
         country: "QATAR",
         title: "The beautiful view of the sunset at beach",
-        price: "100 RIYAL /person"
+        price: "100 RIYAL /person",
+        openSpots: 0
     }
 
 ]

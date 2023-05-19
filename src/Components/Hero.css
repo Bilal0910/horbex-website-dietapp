@@ -6,7 +6,7 @@ main {
     margin-bottom: 7px;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
     .section1 .image {
         width: 43px;
         border-radius: 15px;
@@ -18,9 +18,6 @@ main {
         
     }
 
-    .cards-list {
-        position: relative;
-    }
 
 
     .card {
@@ -38,7 +35,7 @@ main {
     }
 
     .card {
-        width: 140px;
+        width: 130px;
         display: flex;
         align-items: center;
         text-align: center;
