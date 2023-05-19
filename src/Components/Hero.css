@@ -6,7 +6,7 @@ main {
     margin-bottom: 7px;
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 390px) {
     .section1 .image {
         width: 43px;
         border-radius: 15px;

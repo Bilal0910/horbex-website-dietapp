@@ -37,7 +37,7 @@ const data = [
         img: "https://images.pexels.com/photos/1395967/pexels-photo-1395967.jpeg?auto=compress&cs=tinysrgb&w=400",
         rating: "7",
         reviewCount: "6.5",
-        country: "UK London",
+        country: "London",
         title: "Enjoy the buffet where enjoy the desserts as well",
         price: "70 POUND /person",
         openSpots: 0
@@ -61,7 +61,7 @@ const data = [
         img: "https://images.pexels.com/photos/6289778/pexels-photo-6289778.jpeg?auto=compress&cs=tinysrgb&w=400",
         rating: "9",
         reviewCount: "6.5",
-        country: "Norway",
+        country: "NORWAY",
         title: "Ice skating with the loved ones, what else more ?",
         price: "200 NAD /person",
         openSpots: 10
@@ -75,7 +75,7 @@ const data = [
         reviewCount: "4.5",
         country: "SPAIN",
         title: "Wanna play indoor, come lets play air-hockey",
-        price: "100 EURO /person",
+        price: "80 EURO /person",
         openSpots: 10
 
     },
@@ -85,7 +85,7 @@ const data = [
         img: "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=400",
         rating: "7",
         reviewCount: "8.5",
-        country: "Turkey",
+        country: "TURKEY",
         title: "HIking with your beloved is one of the best adventures",
         price: "140 LIRA /person",
         openSpots: 9
@@ -95,8 +95,8 @@ const data = [
         id: 9,
         img: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=400",
         rating: "8",
-        reviewCount: "6.5",
-        country: "MALAYSIA",
+        reviewCount: "6",
+        country: "GERMANY",
         title: "Live cracking concerts with the best bands as hellfire",
         price: "170 RINGIT /person",
         openSpots: 0
@@ -107,7 +107,7 @@ const data = [
         img: "https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg?auto=compress&cs=tinysrgb&w=400",
         rating: "8",
         reviewCount: "9.5",
-        country: "AMSTERDOM",
+        country: "ITALY",
         title: "Night Life on the beautiful hills with beautiful sky",
         price: "98.5 EURO /person",
         openSpots: 10
@@ -130,7 +130,7 @@ const data = [
         rating: "9",
         reviewCount: "7.5",
         country: "PAKISTAN",
-        title: "Volley Ball at HawksBey in the sunny and cool weather ",
+        title: "Volley Ball at HawksBey in the sunny weather ",
         price: "2500 PKR /person",
         openSpots: 20
     },
