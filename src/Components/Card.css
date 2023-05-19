@@ -7,12 +7,19 @@
 
 .card {
     width: 175px;
-    font-size: 12px;
+    font-size: 13px;
     margin-left: 10px;
     flex: 0 0 auto;         
     display: flex;          
     flex-direction: column; 
+    justify-content: center ;
 }
+
+/* @media screen and (max-width: 340px) {
+    .card {
+        width: 120px;
+    }
+} */
 
 .card-image {
     width: 100%;

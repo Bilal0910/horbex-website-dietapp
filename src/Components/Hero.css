@@ -6,7 +6,57 @@ main {
     margin-bottom: 7px;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 360px) {
+    .section1 .image {
+        width: 43px;
+        border-radius: 15px;
+        margin: -2px;
+    }
+
+    .text {
+        margin-top: 50px;
+        
+    }
+
+    .cards-list {
+        position: relative;
+    }
+
+
+    .card {
+        margin-bottom: -40px;
+        margin-top: -15px;
+    }
+
+    button {
+        margin-left: 20px;
+       
+    }
+
+    .animate {
+        margin-right: 30px;
+    }
+
+    .card {
+        width: 140px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    .card-image {
+        margin-left: 20px;
+
+    }
+
+    .section1 .col7 {
+        margin-top: 50px;
+    }
+    
+}
+
+/* @media screen and (max-width: 360px) {
 
     .cards-list {
         display: flex;
@@ -14,11 +64,11 @@ main {
     }
 }
 
-/* @media screen and (max-width: px) {
+@media screen and (max-width: 300px) {
     .section1 .image {
       width: 40px;
     }
-  } */
+  }
 
   @media screen and (max-width: 770px) {
     .section1 .image {
@@ -29,7 +79,7 @@ main {
     .section1 {
         padding-top: 70px;
     }
-  }
+  } */
 
 .section1 {
     background-image: url(https://cdn.home-designing.com/wp-content/uploads/2014/09/bachelor-bedroom.jpeg);
