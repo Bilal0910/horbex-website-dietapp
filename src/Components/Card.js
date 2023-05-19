@@ -7,7 +7,7 @@ function Card({img, rating, reviewCount, country, title, price, openSpots}) {
 
   if (openSpots === 0 ) {
     badgeText = "SOLD OUT"
-  } else if (openSpots != 0) {
+  } else if (openSpots !== 0) {
     badgeText = "AVAILABLE"
   }
 
