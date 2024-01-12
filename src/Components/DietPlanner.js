@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import './DietPlanner.css'; // Import the CSS file
+import React, { useState, useRef } from 'react';
+import html2pdf from 'html2pdf.js';
+import './DietPlanner.css';
 
-const DietPlanGenerator = () => {
+const DietPlanner = () => {
   const [formData, setFormData] = useState({
     gender: 'male',
     age: '',
@@ -10,40 +11,79 @@ const DietPlanGenerator = () => {
   });
 
   const [dietPlan, setDietPlan] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleGenerateDietPlan = () => {
+  const dietPlanRef = useRef(null);
+
+  const handleGenerateDietPlan = async () => {
+    setLoading(true);
+  
     // Basic validation
     if (formData.age <= 0 || formData.height <= 0 || formData.weight <= 0) {
       alert('Please enter valid values for age, height, and weight.');
+      setLoading(false);
       return;
     }
-
-    // Diet plan generation logic based on gender, age, height, and weight
-    let generatedDietPlan = 'Your Diet Plan:\n';
-
-    // Example: Diet plan for a male
-    if (formData.gender === 'male') {
-      if (formData.age >= 18 && formData.age <= 50) {
-        generatedDietPlan += '- Include protein-rich foods.\n';
-        generatedDietPlan += '- Consume a balanced amount of carbohydrates.\n';
-        generatedDietPlan += '- Include healthy fats in your diet.\n';
-      } else {
-        generatedDietPlan += '- Consult with a nutritionist for a personalized plan.\n';
+  
+    try {
+      // Use USDA FoodData Central API to fetch food information based on user input
+      const response = await fetch(
+        `https://api.nal.usda.gov/fdc/v1/foods/search?query=${formData.gender}&api_key=7ROfkxFfKKdqvHB5gwfgi44Lodionz9IpgAiJFgL`
+      );
+  
+      if (!response.ok) {
+        throw new Error(`Failed to fetch food data. Status: ${response.status}`);
       }
-    }
-
-    // Example: Diet plan for a female
-    else if (formData.gender === 'female') {
-      if (formData.age >= 18 && formData.age <= 50) {
-        generatedDietPlan += '- Consume lean proteins.\n';
-        generatedDietPlan += '- Include whole grains in your diet.\n';
-        generatedDietPlan += '- Ensure a balance of healthy fats.\n';
-      } else {
-        generatedDietPlan += '- Consult with a nutritionist for a personalized plan.\n';
+  
+      const data = await response.json();
+  
+      // Check if there are foods in the response
+      if (!data.foods || data.foods.length === 0) {
+        setDietPlan('No diet plan available for the given criteria.');
+        setLoading(false);
+        return;
       }
+  
+      // Process data to generate a diet plan (select random foods)
+      let generatedDietPlan = 'Your Diet Plan:\n';
+  
+      // Randomly select up to 5 foods from the API response
+      const randomFoodCount = Math.min(5, data.foods.length);
+      const selectedFoods = [];
+  
+      for (let i = 0; i < randomFoodCount; i++) {
+        const randomIndex = Math.floor(Math.random() * data.foods.length);
+        const randomFood = data.foods[randomIndex];
+        selectedFoods.push(randomFood);
+      }
+  
+      selectedFoods.forEach((food) => {
+        generatedDietPlan += `- ${food.description}\n`;
+      });
+  
+      setDietPlan(generatedDietPlan);
+    } catch (error) {
+      console.error('Error fetching food data:', error.message);
+      setDietPlan('Error generating diet plan. Please try again.');
     }
+  
+    setLoading(false);
+  };
+  
+  
 
-    setDietPlan(generatedDietPlan);
+  const handleDownloadPDF = () => {
+    if (dietPlanRef.current) {
+      const pdfOptions = {
+        margin: 10,
+        filename: 'diet_plan.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      };
+
+      html2pdf().from(dietPlanRef.current).set(pdfOptions).save();
+    }
   };
 
   const handleChange = (e) => {
@@ -55,8 +95,8 @@ const DietPlanGenerator = () => {
   };
 
   return (
-    <div className="diet-plan-generator">
-      <h2>Diet Plan Generator</h2>
+    <div className="diet-planner">
+      <h2>Diet Planner</h2>
 
       <label>
         Gender:
@@ -96,10 +136,16 @@ const DietPlanGenerator = () => {
         />
       </label>
 
-      <button onClick={handleGenerateDietPlan}>Generate Diet Plan</button>
+      <button onClick={handleGenerateDietPlan} disabled={loading}>
+        {loading ? 'Generating...' : 'Generate Diet Plan'}
+      </button>
+
+      <button onClick={handleDownloadPDF} disabled={!dietPlan}>
+        Download PDF
+      </button>
 
       {dietPlan && (
-        <div className="diet-plan-result">
+        <div className="diet-plan-result" ref={dietPlanRef}>
           <h3>Your Diet Plan:</h3>
           <pre>{dietPlan}</pre>
         </div>
@@ -108,7 +154,14 @@ const DietPlanGenerator = () => {
   );
 };
 
-export default DietPlanGenerator;
+export default DietPlanner;
+
+
+
+
+
+
+
 
 // import React, { useState } from 'react';
 // import './DietPlanGenerator.css'; // Import the CSS file
