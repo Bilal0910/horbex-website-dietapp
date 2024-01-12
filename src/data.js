@@ -135,28 +135,6 @@ const data = [
         openSpots: 20
     },
 
-    {
-        id: 13,
-        img: "https://images.pexels.com/photos/11111674/pexels-photo-11111674.jpeg?auto=compress&cs=tinysrgb&w=400",
-        rating: "4",
-        reviewCount: "6.5",
-        country: "KUWAIT",
-        title: "Go Cart and Mini Cart Racing together",
-        price: "25.5 DINAR /person",
-        openSpots: 0
-    },
-
-    {
-        id: 14,
-        img: "https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=400",
-        rating: "6",
-        reviewCount: "7.5",
-        country: "QATAR",
-        title: "The beautiful view of the sunset at beach",
-        price: "100 RIYAL /person",
-        openSpots: 0
-    }
-
 ]
 
 export default data

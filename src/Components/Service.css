@@ -1,0 +1,50 @@
+/* Basic styling for the services section */
+.services {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on small screens */
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px; /* Reduce padding for smaller screens */
+  }
+  
+  /* Style for individual service cards */
+  .service {
+    text-align: center;
+    width: 100%; /* Take full width on small screens */
+    max-width: 300px;
+    margin-bottom: 20px; /* Add some margin between service cards on small screens */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .service:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Style for service titles */
+  .service h2 {
+    color: #140303;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for service descriptions */
+  .service p {
+    color: #19143b;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Media query for screens with a maximum width of 768px (typical tablet or mobile) */
+  @media screen and (max-width: 850px) {
+    .services {
+      padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .service {
+      max-width: 100%; /* Take full width on small screens */
+    }
+  }
+  

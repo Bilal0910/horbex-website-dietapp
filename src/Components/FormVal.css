@@ -1,0 +1,56 @@
+/* Basic styling for the form */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Style for form fields */
+  div {
+    margin-bottom: 22px;
+    
+  }
+
+
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for error messages */
+  .error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Style for submit button */
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+
+  .free {
+    box-shadow: 0px 2px 10px 8px rgba(20, 24, 245, 0.575);
+    margin-top: 15px;
+  }

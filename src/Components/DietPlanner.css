@@ -1,0 +1,62 @@
+/* Basic styling for the diet plan generator */
+.diet-plan-generator {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  select,
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style for the diet plan result */
+  .diet-plan-result {
+    margin-top: 20px;
+  }
+  
+  h3 {
+    color: #0a0909;
+  }
+  
+  pre {
+    white-space: pre-wrap;
+    color: #131010;
+    text-align: center;
+    font-weight: bold;
+  }
+  

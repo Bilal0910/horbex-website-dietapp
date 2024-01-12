@@ -1,6 +1,9 @@
 import Card from './Components/Card';
 import Hero from './Components/Hero';
 import NavBar from './Components/Nav';
+import FormVal from './Components/FormVal'
+import ServiceSection from './Components/ServiceSection'
+import DietPlanner from './Components/DietPlanner'
 import data from './data';
 import './style.css'
 
@@ -13,13 +16,7 @@ const cards = data.map( item => {
   return (
     <Card 
         key={item.id}
-        img={item.img}
-        rating={item.rating}
-        reviewCount={item.reviewCount}
-        country={item.country}
-        title={item.title}
-        price={item.price}
-        openSpots={item.openSpots}
+        {...item}
     />
   )
 
@@ -35,9 +32,13 @@ const cards = data.map( item => {
       <Hero />
 
       {/* Card Component */}
-      <section className='cards-list'>
-         {cards}
-      </section>
+      <section className='cards-list'> {cards} </section>
+
+      <FormVal />
+
+      <ServiceSection />
+
+      <DietPlanner />
       
 
     </div>

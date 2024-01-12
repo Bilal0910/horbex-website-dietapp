@@ -9,6 +9,7 @@ function Card({img, rating, reviewCount, country, title, price, openSpots}) {
     badgeText = "SOLD OUT"
   } else if (openSpots !== 0) {
     badgeText = "AVAILABLE"
+
   }
 
   return (
@@ -22,9 +23,8 @@ function Card({img, rating, reviewCount, country, title, price, openSpots}) {
         <span className="gray">{country}</span>
     </div>
     <p className='knowledge'>{title}</p>
-    <p className='pricetag'><span className="bold">From {price}</span> </p>
+    <p className='pricetag'><span className="bold">From {price}</span> </p> 
 </div>
-
 
   )
 }
